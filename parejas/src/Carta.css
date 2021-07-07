@@ -1,0 +1,10 @@
+.carta {
+    height: 130px;
+    text-align: center;
+}
+
+.carta p{
+    margin: 0;
+    position: relative;
+    top: 50%;
+}
