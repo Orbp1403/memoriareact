@@ -9,8 +9,9 @@ export default class Tablero extends Component {
             <div className="container">
                 <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                     {
-                        cartas.map((carta) => {
-                            return <Carta />
+                        this.props.baraja.map((carta, index) => {
+                            console.log(carta)
+                            return <Carta key={index} imagen={carta.icon}/>
                         })
                     }
                 </div>
