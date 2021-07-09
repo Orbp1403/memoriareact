@@ -8,17 +8,14 @@ const listaiconos = Object
     .filter(key => key !== "fas")
     .map(icon => Icons[icon])
 
-const auxlista = []
-auxlista.push(Icons.faAd)
-
 export default () => {
     let cartas = [];
-    console.log(auxlista)
     while(cartas.length < CARTAS){
         const index = Math.floor(Math.random() * listaiconos.length)
         const carta = {
             icon : listaiconos[index],
-            adivinada : false
+            adivinada : false,
+            volteada: false
         }
         cartas.push(carta)
         cartas.push({...carta});

@@ -1,36 +1,26 @@
 import React, { Component } from 'react'
 import './Carta.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FlexyFlipCard } from 'flexy-flipcards'
-import ReactCardFlip from 'react-card-flip'
+import FlipCard from 'react-card-flip'
 
 export default class Carta extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            isFlipped:false
-        }
-        this.handleClick = this.handleClick.bind(this);
-    }
-    handleClick = (e) => {
-        e.preventDefault();
-        this.setState(prevState => ({ isFlipped : !prevState.isFlipped }))
-    }
     render() {
         return (
-            <ReactCardFlip isFlipped={this.state.isFlipped}>
-                <div className="col">
-                    <div className="p-3 border bg-warning carta" onClick={this.handleClick}>
-                    </div>
+            <div className="col" onClick={this.props.seleccionarcarta}>
+                <div className="p-3 border carta bg-warning">
+                <FlipCard
+                        isFlipped={this.props.volteada || this.props.adivinada}
+                    >
+                        <div className="portada bg-warning"></div>
+                        <div className="portada bg-success">
+                            <h1 className="icono">
+                                <FontAwesomeIcon icon={this.props.imagen} className="icono"></FontAwesomeIcon>
+                                <br></br>
+                            </h1>
+                        </div>
+                    </FlipCard>
                 </div>
-                <div className="col">
-                    <div className="p-3 border bg-warning carta" onClick={this.handleClick}>
-                        <h1 className="icono">
-                            <FontAwesomeIcon icon={this.props.imagen} className="icono"></FontAwesomeIcon>
-                        </h1>
-                    </div>
-                </div>
-            </ReactCardFlip>
+            </div>
         )
     }
 }
