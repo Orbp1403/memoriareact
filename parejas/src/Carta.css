@@ -1,0 +1,36 @@
+.carta {
+    height: 130px;
+    text-align: center;
+}
+
+.carta p{
+    margin: 0;
+    position: relative;
+    top: 50%;
+}
+
+.carta div{
+    height: 100%;
+}
+
+.icono{
+    margin: 0;
+    position: relative;
+    top: 30%;
+    color: black;
+}
+
+.portada{
+    height: 100%;
+    width: 100%;
+}
+
+.ReactFlipCard{
+    height: 100%;
+    width: 100%;
+}
+
+.ReactFlipCard__Back{
+    height: 100%;
+    width: 100%;
+}

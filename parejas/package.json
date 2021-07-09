@@ -12,9 +12,17 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.0.2",
+    "flexy-flipcards": "^0.1.2",
+    "lodash.shuffle": "^4.2.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
+    "react-card-flip": "^1.1.1",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-flipcard": "^0.2.1",
+    "react-flipcard-2": "^0.3.2",
+    "react-native-flip-card": "^3.5.6",
+    "react-native-flip-card-plus": "^1.0.5",
+    "react-scripts": "^1.1.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -40,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.14.5"
   }
 }
